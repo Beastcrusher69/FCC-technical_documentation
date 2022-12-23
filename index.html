@@ -19,6 +19,8 @@
           <li><a class="nav-link" href="#Conditions">Conditions</a></li>
           <li><a class="nav-link" href="#While_loop">While loop</a></li>
           <li><a class="nav-link" href="#For_loop">For loop</a></li>
+          <li><a class="nav-link" href="#Reference">Reference</a></li>
+  
   
         </ul>
       </nav>
@@ -38,11 +40,51 @@
         <section class="main-section">
           <header id="Output">Output</header>
           </section>
+          <h3>C++ Output (Print Text)</h3>
+         
+         <p> The cout object, together with the << operator, is used to output values/print text:</p>
+  <div class="code-wrap">
+  <h3>Example</h3>
+  <div class="code-block">
+    <code>
+      <pre>
+  #include <iostream>
+  using namespace std;
+  
+  int main() {
+    cout << "Hello World!";
+    return 0;
+  }
+     </pre>
+   </code>
+  </div>
+  </div>
+  <p>You can add as many cout objects as you want. However, note that it does not insert a new line at the end of the output:</p>
+  <div class="code-wrap">
+  
+  <h3>Example</h3>
+  <div class="code-block">
+    <code>
+      <pre>
+  #include <iostream>
+  using namespace std;
+  
+  int main() {
+    cout << "Hello World!";
+    cout << "I am learning C++";
+    return 0;
+  }
+  </pre>
+  </code>
+  </div>
+  </div>
         <section class="main-section">
           <header id="Syntax">Syntax</header>
+          <h3>C++ Syntax</h3>
   <p>Let's break up the following code to understand it better:<p>
   
   <h3>Example</h3>
+  <div class="code-wrap">
   
   <div class="code-block">
   <code>
@@ -56,6 +98,7 @@
   }
   </pre>
   </code>
+  </div>
   </div>
   Example explained
   <p><strong>Line 1:</strong><code class="inline-code"> #include <iostream></code> is a header file library that lets us work with input and output objects, such as <code class="inline-code">cout</code> (used in line 5). Header files add functionality to C++ programs.</p>
@@ -86,42 +129,346 @@
   
   
   <p><strong>Line 7:</strong> Do not forget to add the closing curly bracket <code class="inline-code">}</code>  to actually end the main function.</p>
-  
-  
-  
         </section>
+  
         <section class="main-section">
           <header id="Comments">Comments</header>
-          
+          <h3> Single-line Comments</h3>
+         
+  <p>Single-line comments start with two forward slashes (//).</p>
+  
+  <p>Any text between // and the end of the line is ignored by the compiler (will not be executed).</p>
+  
+  <p>This example uses a single-line comment before a line of code:</p>
+  <div class="code-wrap">
+  <h3>Example</h3>
+  <div class="code-block">
+  <code>
+  <pre>// This is a comment
+  cout << "Hello World!";
+  </pre>
+  </code>
+  </div>
+  </div>
+  <p>This example uses a single-line comment at the end of a line of code:</p>
+  
+  <h3>Example</h3>
+  <div class="code-block">
+  <code>
+  <pre>cout << "Hello World!"; // This is a comment
+  </pre>
+  </code>
+  </div>
+  <h3>C++ Multi-line Comments</h3>
+  <p>Multi-line comments start with /* and ends with */.</p>
+  
+  <p>Any text between /* and */ will be ignored by the compiler:</p>
+  <div class="code-wrap">
+  
+  <h3>Example</h3>
+  <div class="code-block">
+  <code>
+  <pre>/* The code below will print the words Hello World!
+  to the screen, and it is amazing */
+  cout << "Hello World!";
+  </pre>
+  </code>
+  </div>
+  </div>
         </section>
+  
         <section class="main-section">
           <header id="Variable">Variable</header>
-          
+          <h3>C++ Variables</h3>
+  <p>Variables are containers for storing data values.</p>
+  
+  <p>In C++, there are different types of variables (defined with different keywords), for example:</p>
+  
+  <ul>
+  <li><code class="">int</code> - stores integers (whole numbers), without decimals, such as 123 or -123</li>
+  <li><code class="">double</code> - stores floating point numbers, with decimals, such as 19.99 or -19.99</li>
+  <li><code class="">char</code> - stores single characters, such as 'a' or 'B'. Char values are surrounded by single quotes</li>
+  <li><code class="">string</code> - stores text, such as "Hello World". String values are surrounded by double quotes</li>
+  <li><code class="">bool</code> - stores values with two states: true or false</li>
+  </ul>
+  
+  <h3>Declaring (Creating) Variables</h3>
+  <p>To create a variable, specify the type and assign it a value:</p>
+  
+  <h3>Syntax</h3>
+  <div class="code-block">
+    <pre>
+  <code>type variableName = value;</code>
+  </pre>
+  </div>
+  <p>Where type is one of C++ types (such as int), and variableName is the name of the variable (such as x or myName). The equal sign is used to assign values to the variable.</p>
+  
+  
+  <p>To create a variable that should store a number, look at the following example:</p>
+  
+  <div class="code-wrap">
+  <h3>Example</h3>
+  <p>Create a variable called myNum of type int and assign it the value 15:</p>
+  <div class="code-block">
+    <pre>
+  int myNum = 15;
+  cout << myNum;
+    </pre>
+  
+  </div>
+  </div>
+  <p>You can also declare a variable without assigning the value, and assign the value later:</p>
+  
+  
+  <div class="code-wrap">
+  <h3>Example</h3>
+  <div class="code-block">
+  <code>
+    <pre>
+  int myNum;
+  myNum = 15;
+  cout << myNum;
+  </pre>
+  </code>
+  </div>
+  </div>
+  <p>Note that if you assign a new value to an existing variable, it will overwrite the previous value:</p>
+  
+  <div class="code-wrap">
+  <h3>Example</h3>
+  <div class="code-block">
+  <code>
+  int myNum = 15;  // myNum is 15
+  myNum = 10;  // Now myNum is 10
+  cout << myNum;  // Outputs 10
+  </pre>
+  </code>
+  </div>
+  </div>
         </section>
+  
         <section class="main-section">
           <header id="Datatypes">Datatypes</header>
-          
+          <h3>C++ Data Types</h3>
+  </p>As explained in the Variables chapter, a variable in C++ must be a specified data type:</p>
+  
+  <div class="code-wrap">
+  <h3>Example</h3>
+  <div class="code-block">
+  <code>
+  <pre>
+  Example
+  int myNum = 5;               // Integer (whole number)
+  float myFloatNum = 5.99;     // Floating point number
+  double myDoubleNum = 9.98;   // Floating point number
+  char myLetter = 'D';         // Character
+  bool myBoolean = true;       // Boolean
+  string myText = "Hello";     // String
+  </pre>
+  </code>
+  </div>
+  </div>
         </section>
+        
         <section class="main-section">
           <header id="Operators">Operators</header>
-          
+          </h3>C++ Operators</h3>
+  <p>Operators are used to perform operations on variables and values.</p>
+  
+  <p>In the example below, we use the + operator to add together two values:</p>
+  
+  <div class="code-wrap">
+  <h3>Example</h3>
+  <div class="code-block">
+  <code>
+  int x = 100 + 50;
+  </pre>
+  </code>
+  </div>
+  </div>
+  <p>Although the + operator is often used to add together two values, like in the example above, it can also be used to add together a variable and a value, or a variable and another variable:</p>
+  
+  <div class="code-wrap">
+  <h3>Example</h3>
+  <div class="code-block">
+  <code>
+    <pre>
+  int sum1 = 100 + 50;        // 150 (100 + 50)
+  int sum2 = sum1 + 250;      // 400 (150 + 250)
+  int sum3 = sum2 + sum2;     // 800 (400 + 400)
+  </pre>
+  </code>
+  </div>
+  </div>
+  <p>C++ divides the operators into the following groups:</p>
+  
+  <ul>
+  <li>Arithmetic operators</li>
+  <li>Assignment operators</li>
+  <li>Comparison operators</li>
+  <li>Logical operators</li>
+  <li>Bitwise operators</li>
+  </ul>
+  
         </section>
+  
         <section class="main-section">
           <header id="String">String</header>
-          
+          <h3>C++ Strings</h3>
+  <p>Strings are used for storing text.</p>
+  
+  <p>A string variable contains a collection of characters surrounded by double quotes:</p>
+  
+  <div class="code-wrap">
+  <h3>Example</h3>
+  <p>Create a variable of type string and assign it a value:</p>
+  <div class="code-block">
+    <code>
+    <pre>
+  string greeting = "Hello";
+  </pre>
+  </code>
+  </div>
+  </div>
+  <p>To use strings, you must include an additional header file in the source code, the <string> library:</p>
+  
+  <div class="code-wrap">
+  <h3>Example</h3>
+  <div class="code-block">
+    <code>
+    <pre>
+  // Include the string library
+  #include <string>
+  
+  // Create a string variable
+  string greeting = "Hello";
+  </pre>
+  </code>
+  </div>
+  </div>
         </section>
         <section class="main-section">
           <header id="Conditions">Conditions</header>
-          
+          <h3>C++ Conditions and If Statements</h3>
+  <p>You already know that C++ supports the usual logical conditions from mathematics:</p>
+  
+  <ul>
+  <li>Less than: a < b</li>
+  <li>Less than or equal to: a <= b</li>
+  <li>Greater than: a > b</li>
+  <li>Greater than or equal to: a >= b</li>
+  <li>Equal to a == b</li>
+  <li>Not Equal to: a != b</li>
+  </ul>
+  <p>You can use these conditions to perform different actions for different decisions.</p>
+  
+  <p>C++ has the following conditional statements:</p>
+  
+  <ul>
+  <li>Use if to specify a block of code to be executed, if a specified condition is true</li>
+  <li>Use else to specify a block of code to be executed, if the same condition is false</li>
+  <li>Use else if to specify a new condition to test, if the first condition is false</li>
+  <li>Use switch to specify many alternative blocks of code to be executed</li>
+  </ul>
+  <h3>The if Statement</h3>
+  <p>Use the if statement to specify a block of C++ code to be executed if a condition is true.</p>
+  
+  <div class="code-wrap">
+  <h3>Syntax</h3>
+  <div class="code-block">
+    <code>
+      <pre>
+  if (condition) {
+    // block of code to be executed if the condition is true
+  }
+  </pre>
+  </code>
+  </div>
+  </div>
         </section>
         <section class="main-section">
           <header id="While_loop">While loop</header>
-          
+          <h3>C++ While Loop</h3>
+  <h3>C++ Loops</h3>
+  <p>Loops can execute a block of code as long as a specified condition is reached.</p>
+  
+  <p>Loops are handy because they save time, reduce errors, and they make code more readable.</p>
+  
+  <h3>C++ While Loop</h3>
+  <p>The while loop loops through a block of code as long as a specified condition is true:</p>
+  
+  <div class="code-wrap">
+  <h3>Syntax</h3>
+  <div class="code-block">
+    <code>
+    <pre>
+  while (condition) {
+    // code block to be executed
+  }
+  </pre>
+  </code>
+  </div>
+  </div>
+  
+  <p>In the example below, the code in the loop will run, over and over again, as long as a variable (i) is less than 5:</p>
+  
+  <div class="code-wrap">
+  <h3>Example</h3>
+  <div class="code-block">
+    <code>
+    <pre>
+  int i = 0;
+  while (i < 5) {
+    cout << i << "\n";
+    i++;
+  }
+  </pre>
+  </code>
+  </div>
+  </div>
         </section>
         <section class="main-section">
           <header id="For_loop">For loop</header>
-          
+          <h3>C++ For Loop</h3>
+  <p>When you know exactly how many times you want to loop through a block of code, use the for loop instead of a while loop:</p>
+  
+  <div class="code-wrap">
+  <h3>Syntax</h3>
+  <div class="code-block">
+    <code>
+    <pre>
+  for (statement 1; statement 2; statement 3) {
+    // code block to be executed
+  }
+  </pre>
+  </code>
+  </div>
+  </div>
+  <p><strong>Statement 1</strong> is executed (one time) before the execution of the code block.</p>
+  
+  <p><strong>Statement 2</strong> defines the condition for executing the code block.</p>
+  
+  <p><strong>Statement 3</strong> is executed (every time) after the code block has been executed.</p>
+  
+  <p>The example below will print the numbers 0 to 4:</p>
+  
+  <div class="code-wrap">
+  <h3>Example</h3>
+  <div class="code-block">
+    <code>
+    <pre>
+  for (int i = 0; i < 5; i++) {
+    cout << i << "\n";
+  }
+  </pre>
+  </code>
+  </div>
+  </div>
         </section>
+  
+        <section class="main-section">
+          <header id="Reference">Reference</header>
+          </section>
       </main>
       <div>
     </body>
