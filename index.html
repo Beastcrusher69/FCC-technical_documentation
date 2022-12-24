@@ -44,7 +44,7 @@
          
          <p> The cout object, together with the << operator, is used to output values/print text:</p>
   <div class="code-wrap">
-  <h3>Example</h3>
+  <h3 class="ex-syn">Example</h3>
   <div class="code-block">
     <code>
       <pre>
@@ -54,15 +54,14 @@
   int main() {
     cout << "Hello World!";
     return 0;
-  }
-     </pre>
+  }</pre>
    </code>
   </div>
   </div>
   <p>You can add as many cout objects as you want. However, note that it does not insert a new line at the end of the output:</p>
   <div class="code-wrap">
   
-  <h3>Example</h3>
+  <h3 class="ex-syn">Example</h3>
   <div class="code-block">
     <code>
       <pre>
@@ -83,9 +82,9 @@
           <h3>C++ Syntax</h3>
   <p>Let's break up the following code to understand it better:<p>
   
-  <h3>Example</h3>
-  <div class="code-wrap">
   
+  <div class="code-wrap">
+  <h3 class="ex-syn">Example</h3>
   <div class="code-block">
   <code>
   <pre>
@@ -100,7 +99,7 @@
   </code>
   </div>
   </div>
-  Example explained
+  <p>Example explained</p>
   <p><strong>Line 1:</strong><code class="inline-code"> #include <iostream></code> is a header file library that lets us work with input and output objects, such as <code class="inline-code">cout</code> (used in line 5). Header files add functionality to C++ programs.</p>
   
   <p><strong>Line 2:</strong><code class="inline-code"> using namespace std</code> means that we can use names for objects and variables from the standard library.</p>
@@ -141,7 +140,7 @@
   
   <p>This example uses a single-line comment before a line of code:</p>
   <div class="code-wrap">
-  <h3>Example</h3>
+  <h3 class="ex-syn">Example</h3>
   <div class="code-block">
   <code>
   <pre>// This is a comment
@@ -152,12 +151,14 @@
   </div>
   <p>This example uses a single-line comment at the end of a line of code:</p>
   
-  <h3>Example</h3>
+  <div class="code-wrap">
+  <h3 class="ex-syn">Example</h3>
   <div class="code-block">
   <code>
   <pre>cout << "Hello World!"; // This is a comment
   </pre>
   </code>
+  </div>
   </div>
   <h3>C++ Multi-line Comments</h3>
   <p>Multi-line comments start with /* and ends with */.</p>
@@ -165,7 +166,7 @@
   <p>Any text between /* and */ will be ignored by the compiler:</p>
   <div class="code-wrap">
   
-  <h3>Example</h3>
+  <h3 class="ex-syn">Example</h3>
   <div class="code-block">
   <code>
   <pre>/* The code below will print the words Hello World!
@@ -195,7 +196,7 @@
   <h3>Declaring (Creating) Variables</h3>
   <p>To create a variable, specify the type and assign it a value:</p>
   
-  <h3>Syntax</h3>
+  <h3 class="ex-syn">Syntax</h3>
   <div class="code-block">
     <pre>
   <code>type variableName = value;</code>
@@ -207,13 +208,13 @@
   <p>To create a variable that should store a number, look at the following example:</p>
   
   <div class="code-wrap">
-  <h3>Example</h3>
+  <h3 class="ex-syn">Example</h3>
   <p>Create a variable called myNum of type int and assign it the value 15:</p>
   <div class="code-block">
     <pre>
   int myNum = 15;
   cout << myNum;
-    </pre>
+  </pre>
   
   </div>
   </div>
@@ -221,7 +222,7 @@
   
   
   <div class="code-wrap">
-  <h3>Example</h3>
+  <h3 class="ex-syn">Example</h3>
   <div class="code-block">
   <code>
     <pre>
@@ -235,7 +236,7 @@
   <p>Note that if you assign a new value to an existing variable, it will overwrite the previous value:</p>
   
   <div class="code-wrap">
-  <h3>Example</h3>
+  <h3 class="ex-syn">Example</h3>
   <div class="code-block">
   <code>
   int myNum = 15;  // myNum is 15
@@ -250,10 +251,10 @@
         <section class="main-section">
           <header id="Datatypes">Datatypes</header>
           <h3>C++ Data Types</h3>
-  </p>As explained in the Variables chapter, a variable in C++ must be a specified data type:</p>
+  <p>As explained in the Variables chapter, a variable in C++ must be a specified data type:</p>
   
   <div class="code-wrap">
-  <h3>Example</h3>
+  <h3 class="ex-syn">Example</h3>
   <div class="code-block">
   <code>
   <pre>
@@ -272,13 +273,13 @@
         
         <section class="main-section">
           <header id="Operators">Operators</header>
-          </h3>C++ Operators</h3>
+          <h3>C++ Operators</h3>
   <p>Operators are used to perform operations on variables and values.</p>
   
   <p>In the example below, we use the + operator to add together two values:</p>
   
   <div class="code-wrap">
-  <h3>Example</h3>
+  <h3 class="ex-syn">Example</h3>
   <div class="code-block">
   <code>
   int x = 100 + 50;
@@ -289,7 +290,7 @@
   <p>Although the + operator is often used to add together two values, like in the example above, it can also be used to add together a variable and a value, or a variable and another variable:</p>
   
   <div class="code-wrap">
-  <h3>Example</h3>
+  <h3 class="ex-syn">Example</h3>
   <div class="code-block">
   <code>
     <pre>
@@ -320,7 +321,7 @@
   <p>A string variable contains a collection of characters surrounded by double quotes:</p>
   
   <div class="code-wrap">
-  <h3>Example</h3>
+  <h3 class="ex-syn">Example</h3>
   <p>Create a variable of type string and assign it a value:</p>
   <div class="code-block">
     <code>
@@ -333,7 +334,7 @@
   <p>To use strings, you must include an additional header file in the source code, the <string> library:</p>
   
   <div class="code-wrap">
-  <h3>Example</h3>
+  <h3 class="ex-syn">Example</h3>
   <div class="code-block">
     <code>
     <pre>
@@ -374,7 +375,7 @@
   <p>Use the if statement to specify a block of C++ code to be executed if a condition is true.</p>
   
   <div class="code-wrap">
-  <h3>Syntax</h3>
+  <h3 class="ex-syn">Syntax</h3>
   <div class="code-block">
     <code>
       <pre>
@@ -398,7 +399,7 @@
   <p>The while loop loops through a block of code as long as a specified condition is true:</p>
   
   <div class="code-wrap">
-  <h3>Syntax</h3>
+  <h3 class="ex-syn">Syntax</h3>
   <div class="code-block">
     <code>
     <pre>
@@ -413,7 +414,7 @@
   <p>In the example below, the code in the loop will run, over and over again, as long as a variable (i) is less than 5:</p>
   
   <div class="code-wrap">
-  <h3>Example</h3>
+  <h3 class="ex-syn">Example</h3>
   <div class="code-block">
     <code>
     <pre>
@@ -429,11 +430,11 @@
         </section>
         <section class="main-section">
           <header id="For_loop">For loop</header>
-          <h3>C++ For Loop</h3>
+          <h3 class="ex-syn">C++ For Loop</h3>
   <p>When you know exactly how many times you want to loop through a block of code, use the for loop instead of a while loop:</p>
   
   <div class="code-wrap">
-  <h3>Syntax</h3>
+  <h3 class="ex-syn">Syntax</h3>
   <div class="code-block">
     <code>
     <pre>
@@ -453,7 +454,7 @@
   <p>The example below will print the numbers 0 to 4:</p>
   
   <div class="code-wrap">
-  <h3>Example</h3>
+  <h3 class="ex-syn">Example</h3>
   <div class="code-block">
     <code>
     <pre>
@@ -468,6 +469,7 @@
   
         <section class="main-section">
           <header id="Reference">Reference</header>
+          <p>all the information was taken form- <a href="https://www.w3schools.com/cpp/" target="_blank">w3schools</a>
           </section>
       </main>
       <div>
