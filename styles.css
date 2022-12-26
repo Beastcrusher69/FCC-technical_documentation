@@ -9,16 +9,17 @@ body{
   
 }
 :root{
-  --light-shade:#ECFAFE;
-  --dark-shade:#C2E8FF;
-  --labels:#007AC5;
+  --dark-shade:#D6EAF8 ;
+  --sub-heading:#5D6D7E;
+  --labels:#2E86C1;
+  --label-border:#566573;
 }
 
 header{
   font-weight:600;
 }
 #main-doc{
-  background-color:var(--light-shade);
+  /* background-color:var(--light-shade); */
   padding-left:30px;
 }
 #navbar,#main-doc{
@@ -32,9 +33,10 @@ padding-top:30px;
 #navbar{
   min-width:260px;
   background-color:var(--dark-shade);
-  font-size:30px;
+  font-size:20px;
   font-weight:600;
-  border-right:1px solid black;
+  border-right:1px solid var(--label-border);
+  padding:0;
 
 }
 #navbar a{
@@ -42,9 +44,16 @@ padding-top:30px;
   display:block;
   color:var(--labels);
   padding:1rem;
-  border-bottom:1px solid black;
 
 }
+.label-border{
+  /* background-color:var(--label-border); */
+  border-top:2px solid var(--label-border);
+  margin:auto;
+  width:70%;
+  border-radius:1px;
+}
+
 
 #navbar ul{
   margin:0;
@@ -55,6 +64,10 @@ padding-top:30px;
 
 #navbar header{
   text-align:center;
+  font-size:50px;
+  line-height:50px;
+  margin:25px 0;
+  color:#2C3E50;
 }
 
 #main-doc header:not(.firstheader){
@@ -70,6 +83,7 @@ padding-top:30px;
 
 #main-doc h3{
   font-size:22px;
+  color:var(--sub-heading) ;
 }
 #main-doc h3:not(.ex-syn){
   padding:0 0 0 50px;
@@ -91,7 +105,7 @@ padding-top:30px;
   border-radius:10px;
 }
 .code-block{
-  background-color:var(--light-shade);
+  background-color:white;
   border-radius:10px;
   padding:8px 12px;
   margin-top:12px;
@@ -99,7 +113,6 @@ padding-top:30px;
 
 }
 .ex-syn {
-  color:green;
   padding-left:5px;
   margin:5px;
 }
@@ -110,4 +123,40 @@ pre{
 }
 .inline-code{
 
+}
+
+@media(max-width:400px)
+{
+  .wrap{
+    flex-direction:column;
+  }
+
+  
+  #main-doc{
+    overflow-x:hidden;
+    box-shadow:3px 3px 8px 6px var(--sub-heading);
+    padding:12px;
+
+  }
+  #main-doc h3:not(.ex-syn),#main-doc header{
+    text-align:left;
+    padding:0;
+  }
+  
+  #main-doc p,#main-doc ul,.code-wrap{
+    margin: 15px auto;
+  }
+  #navbar,#main-doc{
+    width:100%;
+    scrollbar-width:none;
+
+  }
+  #navbar{
+    height:250px;
+    overflow-y:scroll;
+    scrollbar-width:none;
+  }
+  .label-border:first-of-type{
+    border:none;
+  }
 }
